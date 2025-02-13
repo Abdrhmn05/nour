@@ -109,12 +109,12 @@
     <h1>Tesma7li tkouni My Valentine wnji nkhtb? 💖</h1>
     
     <div class="buttons">
-        <button class="btn EYY" id="yesButton" onclick="showLove(); applyYesEffect()">EYY! 💕</button>
-        <button class="btn le" id="noButton" onclick="showNoMessage()" onmouseover="moveNo()">le 😢</button>
+        <button class="btn EYY" id="eyButton" onclick="showLove(); applyYesEffect()">EYY! 💕</button>
+        <button class="btn le" id="leButton" onclick="showNoMessage()" onmouseover="moveNo()">le 😢</button>
     </div>
 
-    <div id="yesNote" class="hidden"></div> <!-- Div for Yes message -->
-    <div id="noNote" class="hidden"></div> <!-- Div for No message -->
+    <div id="eyNote" class="hidden"></div> <!-- Div for Yes message -->
+    <div id="leNote" class="hidden"></div> <!-- Div for No message -->
 
     <div id="love-content" class="hidden">
         <h2>te amo tanto amore!mozzzzzti 😍</h2>
@@ -166,7 +166,7 @@
 
         // Function to apply a filter effect when the Yes button is clicked
         function applyYesEffect() {
-            document.getElementById("yesButton").classList.add("yes-clicked");
+            document.getElementById("eyButton").classList.add("ey-clicked");
 
             // Automatically start playing the first song (hidden initially)
             const audio = document.getElementById("music");
@@ -174,9 +174,9 @@
             audio.play();
 
             // Show the note directly below the Yes button
-            const yesNote = document.getElementById("yesNote");
-            yesNote.classList.remove("hidden");
-            yesNote.textContent = 'arftk bch t5tri ey';
+            const yesNote = document.getElementById("eyNote");
+            eyNote.classList.remove("hidden");
+            eyNote.textContent = 'arftk bch t5tri ey';
         }
 
         // Function to make the "No" button move randomly when hovered over
@@ -195,9 +195,9 @@
 
         // Function to show the message when the "No" button is clicked
         function showNoMessage() {
-            const noNote = document.getElementById("noNote");
-            noNote.classList.remove("hidden");
-            noNote.textContent = 'le ybhima mtfsdihch';
+            const leNote = document.getElementById("leNote");
+            leNote.classList.remove("hidden");
+            leNote.textContent = 'le ybhima mtfsdihch';
             
         }
     </script>
