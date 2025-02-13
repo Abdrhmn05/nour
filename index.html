@@ -116,12 +116,22 @@
             width: 80%;
             margin-top: 10px;
         }
+        #finalImage {
+            display: none;
+            margin-top: 30px;
+            width: 250px;
+            height: 250px;
+            border-radius: 0; /* Remove circle border */
+            border: 10px solid #ff4d6d;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* Triangular shape */
+        }
     </style>
 </head>
 <body>
 
-    <h1>Will You Be My Valentine? 💖</h1>
-    
+<h1> Tesma7li tkouni My Valentine wnji nokhtb? </h1>
+  
     <div class="buttons">
         <button class="btn yes" id="yesButton" onclick="showLove(); applyYesEffect()">Yes! 💕</button>
         <button class="btn no" id="noButton" onclick="showNoMessage()" onmouseover="moveNo()">No 😢</button>
@@ -147,16 +157,18 @@
             </div>
         </div>
         <p id="message">
-            Nour, &#10084;&#10084;&#10084; naarfk mt2mnich bchy hdha mt3 Valentine whtna kfk, &#10084;&#10084;&#10084; khtr ensen myst79ch nhar mo3yn fil 3am bch ywri 7obo l3abd mo3yn, 
-            &#10084;&#10084;&#10084; ama hdha the least eli mmkn naamla, juste tb9a memories lina. Dima sbra Maaya w 3liya fi nfs lw9t. &#10084;&#10084;&#10084; Wslti lmrhla mnjmch ntkhyl 
-            hyti feha mghirk w mghir klemk w tsroftk, &#10084;&#10084;&#10084; bditi part fi kol chy fi hyti. Wrni bnsba liya fzt lust, &#10084;&#10084;&#10084; w chy heka maandich niyti 
-            safya maak heka. Aleh nou3dek naamal kol chy bch nst7fdh alik, &#10084;&#10084;&#10084; bch tb9i dima liya. Fa9at saat nta3bek Maaya wnst3rf, &#10084;&#10084;&#10084; wsaat htnti 
-            tayerheli chwy, whkka tkoun rls mtbdch brda maafta, wle romance maaft ama kol wa9t naadih maak mytnsch. &#10084;&#10084;&#10084; Bnsba liya heka aleh 
-            maach tjbdi lex wle t9arni rouhk beha, &#10084;&#10084;&#10084; wlh ltswa tbsima mnk wle ay fza. Allah ghlb m3ndnch tswr maa baadhna w jina mnt9blouch, 
-            &#10084;&#10084;&#10084; ama heka mbdl chy fina. Saat mmkn nfsd ena wntyrhelk, &#10084;&#10084;&#10084; ama mnich most3d nkhsr tfla lwhida l9onbla wlmoza, weli tfhmni fi 
-            generation kif hdhi tkoun Maaya. &#10084;&#10084;&#10084; Ya Nour jmal, nhbk brcha kl chy fik tbi3tk dh7ktk soutk fdlktk tsrouftk klemk bklk thblni wttkli  
-            &#10084;&#10084;&#10084; w naach9k, wrabi ykhalina lbaadhna ❤️❤️❤️❤️
+            Nour,  naarfk mt2mnich bchy hdha mt3 Valentine whtna kfk,  khtr ensen myst79ch nhar mo3yn fil 3am bch ywri 7obo l3abd mo3yn, 
+            &ama hdha the least eli mmkn naamla, juste tb9a memories lina. Dima sbra Maaya w 3liya fi nfs lw9t.  Wslti lmrhla mnjmch ntkhyl 
+            hyti feha mghirk w mghir klemk w tsroftk, bditi part fi kol chy fi hyti. Wrni bnsba liya fzt lust, ; w chy heka maandich niyti 
+            safya maak heka. Aleh nou3dek naamal kol chy bch nst7fdh alik,  bch tb9i dima liya. Fa9at saat nta3bek Maaya wnst3rf, wsaat htnti 
+            tayerheli chwy, whkka tkoun rls mtbdch brda maafta, wle romance maaft ama kol wa9t naadih maak mytnsch. Bnsba liya heka aleh 
+            maach tjbdi lex wle t9arni rouhk beha,  wlh ltswa tbsima mnk wle ay fza. Allah ghlb m3ndnch tswr maa baadhna w jina mnt9blouch, 
+            ama heka mbdl chy fina. Saat mmkn nfsd ena wntyrhelk, ama mnich most3d nkhsr tfla lwhida l9onbla wlmoza, weli tfhmni fi 
+            generation kif hdhi tkoun Maaya. Ya Nour jmal, nhbk brcha kl chy fik tbi3tk dh7ktk soutk fdlktk tsrouftk klemk bklk thblni wttkli  
+             w naach9k, wrabi ykhalina lbaadhna ❤️❤️❤️❤️
         </p>
+        <!-- Final Image -->
+        <img id="finalImage" src="final_image.jpeg" alt="Final image of our love" />
     </div>
 
     <!-- Audio players (hidden and visible as requested) -->
@@ -228,4 +240,14 @@
 
         // Function to show the message when the "No" button is clicked
         function showNoMessage() {
-            const noNote = document.getElementById("
+            const noNote = document.getElementById("noNote");
+            noNote.classList.remove("hidden");
+            noNote.textContent = 'le ybhima mtfsdihch';
+
+            // Final image after the paragraph
+            <div class="image-container" id="image5"
+                <img src="photo5.jpeg" alt="Cute memory 5">
+        }
+    </script>
+</body>
+</html>
