@@ -79,10 +79,28 @@
         .note {
             font-size: 1.2rem;
             color: #222;
-            margin-top: 20px;
+            margin-top: 10px;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 2s ease-in-out forwards;
+        }
+        .no-note {
+            font-size: 1.2rem;
+            color: #222;
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 2s ease-in-out forwards;
+        }
+        .audio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        audio {
+            width: 80%;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -95,6 +113,9 @@
         <button class="btn no" id="noButton" onclick="showNoMessage()" onmouseover="moveNo()">No 😢</button>
     </div>
 
+    <div id="yesNote" class="hidden"></div> <!-- Div for Yes message -->
+    <div id="noNote" class="hidden"></div> <!-- Div for No message -->
+
     <div id="love-content" class="hidden">
         <h2>te amo tanto amore!mozzzzzti 😍</h2>
         <div class="images">
@@ -104,24 +125,37 @@
             <img src="r9asti.jpeg" alt="Cute memory 4">
         </div>
         <p id="message">
-            Nour, naarfk mt2mnich bchy hdha mt3 Valentine whtna kfk, khtr ensen myst79ch nhar mo3yn fil 3am bch ywri 7obo l3abd mo3yn, 
-            ama hdha the least eli mmkn naamla, juste tb9a memories lina. Dima sbra Maaya w 3liya fi nfs lw9t. Wslti lmrhla mnjmch ntkhyl 
-            hyti feha mghirk w mghir klemk w tsroftk, bditi part fi kol chy fi hyti. Wrni bnsba liya fzt lust, w chy heka maandich niyti 
-            safya maak heka. Aleh nou3dek naamal kol chy bch nst7fdh alik, bch tb9i dima liya.Fa9at saat nta3bek Maaya wnst3rf, wsaat htnti 
-            tayerheli chwy, whkka tkoun rls mtbdch brda maafta, wle romance maaft ama kol wa9t naadih maak mytnsch. Bnsba liya heka aleh 
-            maach tjbdi lex wle t9arni rouhk beha, wlh ltswa tbsima mnk wle ay fza. Allah ghlb m3ndnch tswr maa baadhna w jina mnt9blouch, 
-            ama heka mbdl chy fina. Saat mmkn nfsd ena wntyrhelk, ama mnich most3d nkhsr tfla lwhida l9onbla wlmoza, weli tfhmni fi 
-            generation kif hdhi tkoun Maaya. Ya Nour jmal, nhbk brcha kl chy fik tbi3tk dh7ktk soutk fdlktk tsrouftk klemk bklk thblni wttkli  
-            w naach9k, wrabi ykhalina lbaadhna ❤️❤️❤️❤️
+            Nour, &#10084;&#10084;&#10084; naarfk mt2mnich bchy hdha mt3 Valentine whtna kfk, &#10084;&#10084;&#10084; khtr ensen myst79ch nhar mo3yn fil 3am bch ywri 7obo l3abd mo3yn, 
+            &#10084;&#10084;&#10084; ama hdha the least eli mmkn naamla, juste tb9a memories lina. Dima sbra Maaya w 3liya fi nfs lw9t. &#10084;&#10084;&#10084; Wslti lmrhla mnjmch ntkhyl 
+            hyti feha mghirk w mghir klemk w tsroftk, &#10084;&#10084;&#10084; bditi part fi kol chy fi hyti. Wrni bnsba liya fzt lust, &#10084;&#10084;&#10084; w chy heka maandich niyti 
+            safya maak heka. Aleh nou3dek naamal kol chy bch nst7fdh alik, &#10084;&#10084;&#10084; bch tb9i dima liya. Fa9at saat nta3bek Maaya wnst3rf, &#10084;&#10084;&#10084; wsaat htnti 
+            tayerheli chwy, whkka tkoun rls mtbdch brda maafta, wle romance maaft ama kol wa9t naadih maak mytnsch. &#10084;&#10084;&#10084; Bnsba liya heka aleh 
+            maach tjbdi lex wle t9arni rouhk beha, &#10084;&#10084;&#10084; wlh ltswa tbsima mnk wle ay fza. Allah ghlb m3ndnch tswr maa baadhna w jina mnt9blouch, 
+            &#10084;&#10084;&#10084; ama heka mbdl chy fina. Saat mmkn nfsd ena wntyrhelk, &#10084;&#10084;&#10084; ama mnich most3d nkhsr tfla lwhida l9onbla wlmoza, weli tfhmni fi 
+            generation kif hdhi tkoun Maaya. &#10084;&#10084;&#10084; Ya Nour jmal, nhbk brcha kl chy fik tbi3tk dh7ktk soutk fdlktk tsrouftk klemk bklk thblni wttkli  
+            &#10084;&#10084;&#10084; w naach9k, wrabi ykhalina lbaadhna ❤️❤️❤️❤️
         </p>
     </div>
 
-    <audio class="music" id="music" controls autoplay loop>
-    <source src="frank_ocean_ivy.mp3" type="audio/mpeg">
-    <source src="Trouble - Frank ocean (Lyrics).mp3" type="audio/mpeg">
-    <source src="EYEDRESS - SOMETHING ABOUT YOU (FEAT. DENT MAY) (OFFICIAL VIDEO).mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+    <!-- Audio players (hidden and visible as requested) -->
+    <div class="audio-container">
+        <audio class="music" id="music" controls autoplay loop style="visibility: hidden;">
+            <source src="frank_ocean_ivy.mp3" type="audio/mpeg">
+            <source src="Trouble - Frank ocean (Lyrics).mp3" type="audio/mpeg">
+            <source src="EYEDRESS - SOMETHING ABOUT YOU (FEAT. DENT MAY) (OFFICIAL VIDEO).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- These will be visible after the first song starts -->
+        <audio class="music" controls>
+            <source src="Trouble - Frank ocean (Lyrics).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio class="music" controls>
+            <source src="EYEDRESS - SOMETHING ABOUT YOU (FEAT. DENT MAY) (OFFICIAL VIDEO).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
     <script>
         // Function to show the love content
@@ -133,15 +167,15 @@
         function applyYesEffect() {
             document.getElementById("yesButton").classList.add("yes-clicked");
 
-            // Automatically start playing the first song
+            // Automatically start playing the first song (hidden initially)
             const audio = document.getElementById("music");
+            audio.style.visibility = 'visible'; // Make the audio player visible
             audio.play();
 
-            // Show the note below the Yes button
-            const note = document.createElement('div');
-            note.classList.add('note');
-            note.textContent = 'arftk bch t5tri ey';
-            document.body.appendChild(note);
+            // Show the note directly below the Yes button
+            const yesNote = document.getElementById("yesNote");
+            yesNote.classList.remove("hidden");
+            yesNote.textContent = 'arftk bch t5tri ey';
         }
 
         // Function to make the "No" button move randomly when hovered over
@@ -160,12 +194,12 @@
 
         // Function to show the message when the "No" button is clicked
         function showNoMessage() {
-            const note = document.createElement('div');
-            note.classList.add('note');
-            note.textContent = 'ybhima mtfsdihch';
-            document.body.appendChild(note);
+            const noNote = document.getElementById("noNote");
+            noNote.classList.remove("hidden");
+            noNote.textContent = 'le ybhima mtfsdihch';
         }
     </script>
 
 </body>
 </html>
+
