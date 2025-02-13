@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffccdc;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 3rem;
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no {
+            background-color: grey;
+            color: white;
+            position: absolute;
+            transition: 0.3s ease-in-out;
+        }
+        .hidden {
+            display: none;
+        }
+        .images {
+            margin-top: 30px;
+        }
+        img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #222;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 2s ease-in-out forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .music {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Be My Valentine? 💖</h1>
+    
+    <div class="buttons">
+        <button class="btn yes" onclick="showLove()">Yes! 💕</button>
+        <button class="btn no" id="noButton" onmouseover="moveNo()">No 😢</button>
+    </div>
+
+    <div id="love-content" class="hidden">
+        <h2>Yay! I Love You! 😍</h2>
+        <p>Here are some of our lovely memories together! 💓</p>
+        <div class="images">
+            <img src="your-image1.jpg" alt="Cute memory 1">
+            <img src="your-image2.jpg" alt="Cute memory 2">
+            <img src="your-image3.jpg" alt="Cute memory 3">
+        </div>
+        <p id="message">
+            Nour, naarfk mt2mnich bchy hdha mt3 Valentine whtna kfk, khtr ensen myst79ch nhar mo3yn fil 3am bch ywri 7obo l3abd mo3yn, 
+            ama hdha the least eli mmkn naamla, juste tb9a memories lina. Dima sbra Maaya w 3liya fi nfs lw9t. Wslti lmrhla mnjmch ntkhyl 
+            hyti feha mghirk w mghir klemk w tsroftk, bditi part fi kol chy fi hyti. Wrni bnsba Kiya fzt lust, w chy heka maandich niyti 
+            safya maak heka. Aleh nou3dek naamal kol chy bch nst7fdh alik, bch tb9i dima liya. Fa9at saat nta3bek Maaya wnst3rf, wsaat htnti 
+            tayerheli chwy, whkka tkoun rls mtbdch brda maafta, wle romance maaft ama kol wa9t naadih maak mytnsch. Bnsba liya heka aleh 
+            maach tjbdi lex wle t9arni rouhk beha, wlh ltswa tbsima mnk wle ay fza. Allah ghlb m3ndnch tswr maa baadhna w jina mnt9blouch, 
+            ama heka mbdl chy fina. Saat mmkn nfsd ena wntyrhelk, ama mnich most3d nkhsr tfla lwhida l9onbla wlmoza, weli tfhmni fi 
+            generation kif hdhi tkoun Maaya. Ya Nour jmal, nhbk brcha w naach9k, wrabi ykhalina lbaadhna ❤️❤️❤️❤️
+        </p>
+    </div>
+
+    <audio class="music" controls autoplay loop>
+        <source src="ivy.mp3" type="audio/mpeg">
+        <source src="trouble.mp3" type="audio/mpeg">
+        <source src="something-about-you.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function showLove() {
+            document.getElementById("love-content").classList.remove("hidden");
+        }
+
+        function moveNo() {
+            let noButton = document.getElementById("noButton");
+            let x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            let y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = ${x}px;
+            noButton.style.top = ${y}px;
+        }
+    </script>
+
+</body>
+</html>
